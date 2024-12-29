@@ -34,4 +34,11 @@ CREATE TABLE netflix
 )
 select * from netflix; 
 ```
- 
+ ## Business Problems and Solutions
+```sql
+SELECT 
+    type,
+    COUNT(*)
+FROM netflix
+GROUP BY 1;
+```
