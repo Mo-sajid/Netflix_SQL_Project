@@ -32,8 +32,9 @@ CREATE TABLE netflix
 	duration VARCHAR(12),
 	listed_in VARCHAR(90),
 	description VARCHAR(270)
-)
+) ```
 select * from netflix; 
+
 
 ## Business Problems and Solutions
 ```sql
@@ -43,5 +44,5 @@ SELECT
 FROM netflix
 GROUP BY 1;
 ```
-```
+
 
