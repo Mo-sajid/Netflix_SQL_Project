@@ -17,7 +17,6 @@ The data for this project is sourced from the Kaggle dataset:
 
   ## Schema
   ```sql
-Netflix Projects;
 CREATE TABLE netflix
 (
 	show_id VARCHAR(6),	
