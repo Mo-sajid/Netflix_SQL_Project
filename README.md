@@ -15,24 +15,29 @@ The data for this project is sourced from the Kaggle dataset:
 - Dataset Link: [Netflix Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
 
 
-  ## Schema
-  ```sql
+# Netflix Database Schema
+
+This repository contains the schema and usage examples for the `netflix` database, which stores data about Netflix shows and movies.
+
+## Schema
+
+```sql
 CREATE TABLE netflix
 (
-	show_id VARCHAR(6),	
-	type  VARCHAR(10),
-	title VARCHAR(120),
-	director VARCHAR(220),
-	casts VARCHAR(820),
-	country VARCHAR(130),
-	date_added VARCHAR(25),
-	release_year INT,
-	rating VARCHAR(15),
-	duration VARCHAR(12),
-	listed_in VARCHAR(90),
-	description VARCHAR(270)
+    show_id VARCHAR(6),	
+    type  VARCHAR(10),
+    title VARCHAR(120),
+    director VARCHAR(220),
+    casts VARCHAR(820),
+    country VARCHAR(130),
+    date_added VARCHAR(25),
+    release_year INT,
+    rating VARCHAR(15),
+    duration VARCHAR(12),
+    listed_in VARCHAR(90),
+    description VARCHAR(270)
 );
-```
+
 
 
 
