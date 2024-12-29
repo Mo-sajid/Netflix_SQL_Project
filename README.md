@@ -42,12 +42,18 @@ CREATE TABLE netflix
 
 
 ## Business Problems and Solutions
+
+This section highlights business problems related to Netflix's content catalog and the SQL solutions to address them.
+
+### Problem: How many Movies and TV Shows are available in the database?
+
+#### SQL Query:
 ```sql
 SELECT 
     type,
     COUNT(*)
 FROM netflix
 GROUP BY 1;
-```
+
 
 
