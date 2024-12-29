@@ -14,6 +14,7 @@ This project involves a comprehensive analysis of Netflix's movies and TV shows 
 The data for this project is sourced from the Kaggle dataset:
 - Dataset Link: [Netflix Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
 
+
   ## Schema
   ```sql
   -- Netflix Projects--
@@ -33,8 +34,8 @@ CREATE TABLE netflix
 	description VARCHAR(270)
 )
 select * from netflix; 
-```
- ## Business Problems and Solutions
+
+## Business Problems and Solutions
 ```sql
 SELECT 
     type,
@@ -42,3 +43,5 @@ SELECT
 FROM netflix
 GROUP BY 1;
 ```
+```
+
