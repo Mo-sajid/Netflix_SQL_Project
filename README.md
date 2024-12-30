@@ -77,7 +77,7 @@ where
 
 ### 3.List all the movies released in a specific  year (e.g., 2020)?
 #### SQL Query:
-```
+```sql
 select * from netflix
  where
  		type = 'Movie'
@@ -87,7 +87,7 @@ select * from netflix
 
 ### 4.Find the top 5 countries with the most content on Netflix?
 #### SQL Query:
-```
+```sql
 select 
 	 unnest(string_to_array(country, ',')) as new_country,
 	count(show_id) as total_content
@@ -102,7 +102,7 @@ from netflix;
 
 ### 5.Identify the longest movie?
 #### SQL Query:
-```
+```sql
 select * from netflix
 where
  		type = 'Movie'
@@ -112,7 +112,7 @@ where
 
 ### 6.Find content added in the last five years?
 #### SQL Query:
-```
+```sql
 select 
 		*
 		
@@ -123,7 +123,7 @@ where
 
 ### 7.Find all TV movies/shows by director 'Rajiv Chilaka'?
 #### SQL Query:
-```
+```sql
 select 
 		type,
 		director
@@ -133,7 +133,7 @@ where director like '%Rajiv Chilaka%';
 
 ### 8.List all TV Show with more then five seasons?
 #### SQL Query:
-```
+```sql
 select 
 		*
 from netflix
@@ -145,7 +145,7 @@ where
 
 ### 9.Count the number of content items in each genre?
 #### SQL Query:
-```
+```sql
 select 
 		unnest(string_to_array(listed_in, ',')) as genre,
 		count(show_id) as Total_content
@@ -155,7 +155,7 @@ group by genre;
 
 ### 10.find each years and find numbers of content release by India on netflix. Return top 5 years with highest avg content release! 
 #### SQL Query:
-```
+```sql
 SELECT
 		EXTRACT(YEAR FROM To_Date(date_added, ' Month DD, YYYY')) as date,		
 		count(*) as yearly_content,
@@ -169,7 +169,7 @@ group by 1;
 
 ### 11.List all movies that are?
 #### SQL Query:
-```
+```sql
 select * from netflix
 where
 		listed_in like '%Documentaries%'; 
@@ -177,7 +177,7 @@ where
 
 ### 12.Find all content without a director?
 #### SQL Query:
-```
+```sql
 select * from netflix
 where 
 		director is null;
@@ -185,7 +185,7 @@ where
 
 ### 13.How many movies actor 'Salman Khan' appeared in last 10 years?
 #### SQL Query:
-```
+```sql
 select * from netflix
 where 	
 		casts ilike '%Salman Khan%'
@@ -195,7 +195,7 @@ where
 
 ### 14. Find the top 10 actors who have appeared in the highest number of movies produced in the India?
 #### SQL Query:
-```
+```sql
 select 
 		unnest(string_to_array(casts, ',')) as actor,
 		count(*) as total_content
@@ -209,7 +209,7 @@ limit 10;
 
 ### 15.Categorize the content based on the presence of the keyward 'Kill'  and 'Violence' in the description field. Label contain containing these keywards as 'Bad' and all other cntent as good. count how many item fall each category?
 #### SQL Query:
-```
+```sql
 with new_table
 as
 (
