@@ -55,6 +55,7 @@ GROUP BY 1;
 ```
 
 ### 2. Find the Most Common Rating for Movies and TV Shows?
+
 #### SQL Query:
 ```
 SELECT
